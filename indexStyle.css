@@ -1,0 +1,1300 @@
+:root {
+    font-size: 1.5vw;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+/* ---------NAV-BAR----------- */
+
+.navigation-bar,
+.new-navigation-bar {
+    width: 100%;
+    height: 12vh;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-left: 5px solid red;
+    position: sticky;
+    top: 0vh;
+    transition: all 0.5s;
+    z-index: 2;
+}
+
+.new-navigation-bar {
+    width: 100%;
+    height: 10vh;
+    box-shadow: 0px 0px 15px -2px rgb(202, 202, 202);
+}
+
+.brand-name {
+    font-family: "Comfortaa", cursive;
+    margin-left: 15px;
+    font-size: 17px;
+    letter-spacing: 2px;
+    color: grey;
+    display: none;
+}
+
+.brand-name p {
+    font-family: "Comfortaa", cursive;
+    font-weight: bold;
+}
+
+.links {
+    display: flex;
+}
+
+.menu-icon {
+    color: rgb(168, 168, 168);
+    font-family: "Comfortaa", cursive;
+    font-size: 17px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin: 0px 20px 20px 15px;
+    border-bottom: 2px solid rgb(255, 7, 7);
+    padding-bottom: 10px;
+    width: 85%;
+    display: none;
+}
+
+.desktop-link {
+    display: flex;
+}
+
+.mobile-view-links {
+    display: none;
+}
+
+.active-links {
+    margin: 10px 25px;
+    color: grey;
+    font-size: 13px;
+    font-family: "Comfortaa", cursive;
+    letter-spacing: 2px;
+    font-weight: bolder;
+    border-bottom: 2px solid rgb(255, 145, 145);
+    padding: 5px 0px;
+    padding: 0px 20px 5px 2px;
+}
+
+.active-links:hover {
+    cursor: pointer;
+    color: rgb(255, 20, 20);
+    border-bottom: 2px solid rgb(33, 113, 216);
+}
+
+.social-links {
+    display: none;
+}
+
+.burger {
+    margin-right: 20px;
+    justify-content: center;
+    flex-direction: column;
+    display: none;
+}
+
+.line {
+    width: 25px;
+    height: 3px;
+    background-color: rgb(129, 0, 0);
+    margin: 5px;
+}
+
+@media screen and (max-width: 795px) {
+    .navigation-bar {
+        justify-content: space-between;
+        height: 60px;
+        position: fixed;
+        top: 0;
+    }
+
+    .new-navigation-bar {
+        height: 60px;
+        justify-content: space-between;
+        position: fixed;
+        top: 0;
+    }
+
+    .brand-name {
+        font-family: "Comfortaa", cursive;
+        display: block;
+    }
+
+    .link-container {
+        display: flex;
+        background-color: indianred;
+        justify-content: center;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    .links,
+    .new-links {
+        display: flex;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        height: 100vh;
+        width: 70vw;
+        flex-direction: column;
+        background-color: rgb(255, 255, 255);
+        border-left: 5px solid red;
+        border-right: 10px solid red;
+        margin-left: -5px;
+        padding-top: 30px;
+        transition: all 0.2s;
+        transform: translateX(-100%);
+        overflow-y: scroll;
+        opacity: 0;
+    }
+
+    .new-links {
+        transform: translate(0%);
+        transition: all 0.1s;
+        opacity: 1;
+    }
+
+    .desktop-link {
+        display: block;
+    }
+
+    .mobile-view-links {
+        display: block;
+        margin-top: -15px;
+    }
+
+    .active-links,
+    .new-active-links {
+        color: rgb(119, 119, 119);
+        margin: 15px 30px;
+        padding: 0px;
+        transform: translateX(-50%);
+        opacity: 0;
+        transition: 0.2s;
+        border: none;
+    }
+
+    .new-active-links {
+        transform: translateX(0%);
+        transition: 0.2s;
+        opacity: 1;
+    }
+
+    .new-active-links:hover {
+        border: none;
+    }
+
+    .social-links {
+        height: 70px;
+        width: 100%;
+        margin-top: 50px;
+        background-color: rgb(231, 231, 231);
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .social-links:hover {
+        border: none;
+    }
+
+    .logo-container {
+        min-width: 40px;
+        height: 40px;
+    }
+
+    .facebook,
+    .instagram {
+        height: 38px;
+        min-width: 38px;
+    }
+
+    .logo {
+        width: 100%;
+        height: 100%;
+    }
+
+    .new-social-links {
+        opacity: 1;
+    }
+
+    .burger {
+        display: block;
+        cursor: pointer;
+    }
+} /* --------NAV-BAR ENDS----------  */
+
+/* home section starts */
+.main-banner {
+    width: 100%;
+    height: 32vw;
+    position: relative;
+    background-color: rgb(255, 0, 0);
+    opacity: 0.9;
+    transition: opacity 0.5s;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.main-banner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url(media/p5.jpeg);
+    background-position: center;
+    background-size: cover;
+    opacity: 0.8;
+    z-index: -1;
+}
+
+.company-tags {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: rgb(255, 255, 255);
+    padding-top: 2em;
+}
+
+.company-brand-name {
+    font-family: ubuntu;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-size: 5rem;
+    padding-bottom: 0.5em;
+}
+
+#brand-dec {
+    border-bottom: 3px solid rgb(255, 255, 255);
+}
+
+.title {
+    font-family: "Comfortaa", cursive;
+    letter-spacing: 2px;
+    font-size: 1.8rem;
+}
+
+.sub-title {
+    font-family: "Comfortaa", cursive;
+    font-size: 0.8rem;
+    padding-top: 0.7em;
+    letter-spacing: 2px;
+}
+
+.book-now-button {
+    background: transparent;
+    margin: 35px 0px;
+    border: 1px solid red;
+    color: white;
+    font-size: 0.8rem;
+    padding: 0.7em 1.3em;
+    border-radius: 2px;
+}
+
+.book-now-button:hover {
+    background-color: rgb(255, 36, 36);
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.desktop-social-link {
+    width: 20%;
+    padding: 0.1em;
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    right: 0px;
+    bottom: 10px;
+    border-radius: 50px 0px 0px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.desktop-social-links {
+    width: 90%;
+    height: 90%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.desktop-logo-container {
+    width: 3.1vw;
+    height: 3vw;
+    margin: 0px 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+.desktop-logo-container:hover {
+    transform: rotate(720deg);
+}
+
+.desktop-whatsapp {
+    width: 3.6vw;
+    height: 3.6vw;
+}
+
+.desktop-logo {
+    width: 100%;
+    height: 100%;
+} /* home section ends here */
+
+@media screen and (max-width: 795px) {
+    .main-slider {
+        height: 35vw;
+        margin-top: 60px;
+        text-align: center;
+    }
+
+    .desktop-social-link {
+        display: none;
+    }
+
+    .book-now-button {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    :root {
+        font-size: 1.4vw;
+    }
+
+    .sub-title {
+        width: 90%;
+    }
+
+    .book-now-button {
+        margin-top: 5em;
+    }
+}
+
+/* services section*/
+.company-services {
+    width: 100%;
+    margin: auto;
+    padding: 3em 0em;
+}
+
+.services {
+    font-family: "Comfortaa", cursive;
+    text-align: center;
+    font-size: 1.7rem;
+    color: rgb(155, 153, 153);
+}
+
+.service-desc {
+    width: 80%;
+    margin: 0px auto;
+    font-family: "Montserrat", sans-serif;
+    text-align: center;
+    font-size: 0.8rem;
+    padding: 1em 0em;
+    letter-spacing: 1px;
+    color: rgb(177, 177, 177);
+}
+
+.service-logo-container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2em 0em;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.service-image-container {
+    height: 200px;
+    width: 250px;
+    border-radius: 2px;
+    text-align: center;
+    box-shadow: 0px 0px 15px -7px rgb(255, 101, 101);
+    display: flex;
+    align-items: flex-end;
+    transition: all 1.5s;
+}
+
+.service-image-container:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.imageLinks {
+    color: rgb(255, 255, 255);
+    background-color: rgb(255, 68, 0);
+    width: 100%;
+    transition: all 0.5s;
+    font-family: "Comfortaa", cursive;
+    letter-spacing: 2px;
+    font-weight: bold;
+    padding: 0.5em 0em;
+    font-size: 0.8rem;
+}
+
+#imageGroup1 {
+    background-image: url("media/p2.jpeg");
+    background-position: top;
+    background-size: cover;
+}
+
+#imageGroup2 {
+    background-image: url("media/event1.jpeg");
+    background-position: center;
+    background-size: cover;
+}
+
+#imageGroup3 {
+    background-image: url("media/wedding1.jpg");
+    background-position: top;
+    background-size: cover;
+}
+
+#imageGroup4 {
+    background-image: url("media/product2.jpg");
+    background-position: center;
+    background-size: cover;
+} /* services section ends here*/
+
+/* package-price-list */
+.package-price-list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.package-description {
+    text-align: center;
+    padding: 0em 0em 1em 0em;
+}
+
+.package-description-heading {
+    font-family: "Comfortaa", cursive;
+    font-size: 1.7rem;
+    letter-spacing: 0.1em;
+    font-weight: 400;
+    color: rgb(114, 114, 114);
+}
+
+.package-description-quotes {
+    width: 80%;
+    margin: auto;
+    font-family: "Comfortaa", cursive;
+    font-size: 0.8rem;
+    letter-spacing: 0.1em;
+    padding-top: 1em;
+    font-weight: 400;
+    color: rgb(153, 153, 153);
+    line-height: 1.5em;
+}
+
+.combo-pack {
+    width: 90%;
+    height: 50%;
+}
+
+.combo-title,
+.pre-post-title {
+    font-size: 1rem;
+    letter-spacing: 0.1em;
+    padding: 2em 0em 4em 0em;
+    color: grey;
+    text-align: center;
+    font-family: "Comfortaa", cursive;
+}
+
+.pre-post-title {
+    padding: 0px;
+}
+
+.combo-title-mod {
+    font-family: "Comfortaa", cursive;
+    color: rgb(199, 125, 125);
+}
+
+.package-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.package {
+    height: 15vw;
+    width: 400px;
+    min-width: 200px;
+    background-color: rgb(255, 255, 255);
+    margin: 0px 25px;
+    position: relative;
+    border-bottom: 1px solid rgb(255, 255, 255);
+    border-left: 1px solid rgb(255, 255, 255);
+    box-shadow: -10px 10px 20px -10px rgb(206, 206, 206);
+    transition: all 0.5s ease-in-out;
+}
+
+.package:hover,
+.package:active {
+    box-shadow: 10px -10px 20px -10px rgb(206, 206, 206);
+    border-bottom: 1px solid red;
+    border-left: 1px solid red;
+
+    transform: translateY(-10px);
+}
+
+.stadard-package {
+    height: 17vw;
+    position: relative;
+    z-index: 1;
+}
+
+.stadard-package::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    background-image: url(media/engRing.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.5;
+    transition: all 0.5s;
+}
+
+.stadard-package:hover::after {
+    opacity: 1;
+}
+
+.package-title {
+    font-size: 0.7rem;
+    text-align: center;
+    font-family: "Comfortaa", cursive;
+    position: absolute;
+    top: -20px;
+    letter-spacing: 0.1em;
+    font-weight: 400;
+    color: grey;
+}
+
+.know-more-btn {
+    position: absolute;
+    left: 10px;
+    bottom: -15px;
+    padding: 0.8em 1.5em;
+    border: none;
+    background-image: linear-gradient(
+        to right,
+        rgb(255, 28, 28),
+        rgb(228, 0, 0)
+    );
+    font-size: 0.6rem;
+    color: white;
+    letter-spacing: 1px;
+    cursor: pointer;
+} /* combo-package ends */
+
+/* prewedding section */
+.prewedding-title,
+.individual-package-title,
+.portrait-heading,
+.prewedding-desc,
+.prewedding-price,
+.one-day-heading,
+.one-day-engagement-title,
+.one-day-wedding,
+.engagement-heading {
+    font-family: "Montserrat", sans-serif;
+    color: white;
+    font-size: 1.7rem;
+    padding: 1em 0em 0.5em 2em;
+    letter-spacing: 2px;
+}
+
+.individual-packgae-container {
+    width: 100%;
+    margin: 3em 1em 1em 0em;
+}
+
+.individual-package-title {
+    font-family: "Montserrat", sans-serif;
+    font-size: 2rem;
+    padding: 0.5em 0em 1em 2.1em;
+    letter-spacing: 2px;
+    color: rgb(99, 99, 99);
+    font-weight: 200;
+    text-align: left;
+}
+
+.pre-weddign-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 36.5vw;
+    margin: 5px;
+    border-top-right-radius: 30px;
+    background-image: linear-gradient(grey, black);
+}
+
+.prewedding-title{
+    padding-left: 2.4em;
+}
+
+.prewedding-desc {
+    font-size: 0.7em;
+    padding: 0.2em 5.9em;
+    font-weight: bold;
+}
+
+.prewedding-price {
+    font-size: 1.2rem;
+    padding-left: 3.4em;
+}
+
+.prewedding-expore {
+    padding: 0.5em 1.5em;
+    margin: 1em 6.2em;
+    color: grey;
+    background-color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.5s ease-in-out;
+}
+
+.prewedding-expore:hover {
+    background-color: gray;
+    color: white;
+}
+
+.prewedding-logo {
+    height: 30.6vw;
+    position: relative;
+    right: -20%;
+    bottom: -8.1%;
+    border-bottom: 12px solid yellow;
+}
+
+.pre-logo {
+    height: 100%;
+}
+
+.one-day-shoot-container {
+    width: 100%;
+}
+
+.one-day-engagement-title {
+    padding: 1em 0em 1.2em 8.7em;
+    text-transform: uppercase;
+    color: rgb(253, 51, 51);
+}
+
+.one-day-engagement-desc {
+    width: 100%;
+    display: flex;
+    background-repeat: no-repeat;
+}
+
+.engagement-box {
+    width: 65%;
+    height: 36.5vw;
+    border-left: 2px solid red;
+}
+
+.engagement-fotography {
+    background-image: url(media/engIv.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-left: 25px;
+    border: none;
+    width: 25%;
+}
+
+.engagement-cinematography {
+    position: relative;
+    z-index: 1;
+}
+
+.engagement-cinematography::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    background-image: url(media/dottedLine.png);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 80%;
+    opacity: 0.6;
+}
+
+.engagement-heading {
+    padding: 0.2em 0em 0.5em 1.3em;
+    font-size: 1.5rem;
+    color: grey;
+}
+
+.eng-style {
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.8rem;
+    padding: 0.1em 2.4em;
+    color: rgb(160, 160, 160);
+}
+
+.engagement-price {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1rem;
+    letter-spacing: 1.2px;
+    padding: 0.5em 2em;
+    color: rgb(99, 99, 99);
+}
+
+.engagement-btn {
+    border: none;
+    background-color: rgb(8, 89, 136);
+    color: white;
+    padding: 0.7em 1em;
+    margin: 2em 3.1em;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.one-day-wedding {
+    padding: 2em 0em 1em 0em;
+    color: grey;
+    text-align: center;
+}
+
+.one-day-wedding-desc {
+    width: 100%;
+    padding-bottom: 4.5em;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-image: url(media/circle.png);
+    background-position: center;
+    background-size: 40%;
+    background-repeat: no-repeat;
+}
+
+.wedding-card {
+    width: 40%;
+    height: 300px;
+    height: 22.3vw;
+    background-color: rgb(255, 255, 255);
+    margin: 5px;
+    border: 1px solid white;
+    box-shadow: -10px 10px 20px -10px rgb(211, 211, 211);
+    transition: all 0.5s ease-in-out;
+    position: relative;
+}
+
+.wedding-card:hover {
+    border-top: 1px solid white;
+    border-right: 1px solid white;
+    border-bottom: 1px solid red;
+    border-left: 1px solid red;
+    box-shadow: 10px -10px 20px -10px rgb(231, 231, 231);
+    transform: scaleX(1);
+}
+
+.wedding-plans {
+    font-family: "Montserrat", sans-serif;
+    color: rgb(104, 104, 104);
+    font-size: 1.2rem;
+    text-align: center;
+    padding: 0.7em 0em;
+    letter-spacing: 2px;
+}
+.one-day-basics-highlights,
+.one-day-standard-highlights,
+.one-day-bsics-lists,
+.one-day-standard-lists,
+.one-day-wedding-price {
+    font-family: "Montserrat", sans-serif;
+    color: rgb(105, 105, 105);
+    font-size: 1rem;
+    padding: 0.6em 0.8em;
+    letter-spacing: 1px;
+}
+
+.one-day-bsics-lists,
+.one-day-standard-lists {
+    font-size: 0.7rem;
+    color: rgb(170, 170, 170);
+    padding: 0em 1.2em;
+    letter-spacing: 1px;
+}
+
+.wed-spn-style {
+    color: rgb(255, 23, 23);
+}
+
+.one-day-wedding-price {
+    font-size: 0.8rem;
+    padding: 0.6em 1em;
+}
+
+.one-day-wedding-button {
+    border: none;
+    background-color: teal;
+    color: white;
+    padding: 0.8em 1em;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    cursor: pointer;
+    transition: all 0.5s ease-in;
+}
+
+.one-day-wedding-button:hover {
+    background-color: rgb(0, 172, 172);
+    border-radius: 5px;
+}
+
+.one-day-wedding-c-one {
+    z-index: 1;
+}
+
+.one-day-wedding-c-one::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-image: url(media/art.png);
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: 50%;
+    z-index: -1;
+    opacity: 0.3;
+    transition: all 0.5s;
+}
+
+.one-day-wedding-c-one:hover::after {
+    opacity: 0.4;
+}
+
+.one-day-wedding-c-two {
+    background-image: url(media/groom.png);
+    background-position: right;
+    background-size: 50%;
+    background-repeat: no-repeat;
+}
+
+.portrait-shoot {
+    width: 100%;
+    height: 40vw;
+    margin: auto;
+    background-color: red;
+    position: relative;
+    z-index: 1;
+}
+
+.portrait-shoot::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-image: url(media/smoke.png);
+    opacity: 0.5;
+    z-index: -1;
+}
+
+.portrait-category {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.portrait-pngs {
+    height: 40vw;
+    background-color: rgb(255, 255, 255);
+}
+
+.portrait-imgs {
+    height: 50%;
+    margin-top: 50%;
+}
+
+@media screen and (max-width: 700px) {
+    .postwedding {
+        background-image: linear-gradient(black, grey);
+    }
+}
+
+@media screen and (max-width: 495px) {
+    :root {
+        font-size: 1.9vw;
+    }
+}
+
+/* mini gallery */
+
+/* -------------randomPhotoSlideShow------------- */
+
+#slide-show-heading {
+    font-size: 35px;
+    margin-top: 30px;
+    font-family: "Comfortaa", cursive;
+    letter-spacing: 1.5px;
+    color: rgb(112, 112, 112);
+    margin-left: 10px;
+    padding: 0px;
+}
+
+#slides-endline {
+    color: rgb(156, 156, 156);
+}
+
+.slides-design {
+    color: rgb(255, 0, 0);
+}
+
+/* ----------------fotos in focus---------------- */
+
+.main-gallery {
+    width: 100%;
+    margin: auto;
+    border: 2px solid rgb(255, 255, 255);
+    display: flex;
+    justify-content: space-evenly;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.left-box,
+.right-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.left-images,
+.right-images {
+    width: 27vw;
+    height: 15vw;
+    background-color: rgb(255, 255, 255);
+    margin: 5px;
+    overflow: hidden;
+    box-shadow: 0px -5px 15px -3px rgb(219, 219, 219);
+}
+
+.main-slider {
+    width: 43vw;
+    height: 30.7vw;
+    background-color: white;
+    background-color: rgb(65, 65, 65);
+    overflow: hidden;
+}
+
+.slide-container {
+    background-color: rgb(65, 65, 65);
+    overflow: hidden;
+}
+
+.carousel-item {
+    /* width: 600px; */
+    width: 100%;
+}
+.slide-image {
+    width: 100%;
+    height: 100%;
+}
+
+.main-image {
+    width: 100%;
+    transition: all 1s;
+}
+
+.main-image:hover {
+    transform: scale(1.2);
+    opacity: 0.9;
+}
+
+/* ----------------fotos in focus ends---------------- */
+
+/* -------------mini-gallery------------- */
+
+/* mini gallery ends */
+
+/* -----------------client feedback----------------- */
+
+.feedback-area {
+    width: 100%;
+    height: 500px;
+    background-color: rgb(238, 238, 238);
+    margin: auto;
+    align-items: center;
+    font-family: "Comfortaa", cursive;
+    letter-spacing: 1.5px;
+    color: rgb(66, 66, 66);
+}
+
+.feedback-heads {
+    /* margin-left: 20px; */
+    text-align: center;
+    position: relative;
+    top: 30px;
+    color: rgb(88, 88, 88);
+}
+
+.feedback-content {
+    width: 100%;
+    height: 500px;
+    background-color: rgb(238, 238, 238);
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    font-family: ubuntu;
+}
+
+.feedback-box {
+    width: 350px;
+    height: 210px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 10px 15px -2px rgb(189, 189, 189);
+    margin: auto;
+}
+
+.profile-pic {
+    width: 85px;
+    height: 85px;
+    background-color: rgb(226, 226, 226);
+    border-radius: 15px;
+    border: 5px solid rgb(255, 255, 255);
+    overflow: hidden;
+}
+
+.user-pic {
+    width: 100%;
+}
+
+.user-name {
+    font-family: ubuntu;
+    /* font-weight: 600; */
+    margin-left: 15px;
+    letter-spacing: 1px;
+    color: rgb(80, 80, 80);
+}
+
+.user-profile {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-top: 20px;
+    right: 35px;
+}
+
+.text {
+    margin-left: 20px;
+    margin-top: 20px;
+    font-size: 15px;
+    color: rgb(99, 99, 99);
+}
+
+/* -----------------client feedbck ends----------------- */
+
+/* --------------------query-------------------- */
+
+.contact-us-area {
+    font-family: "Comfortaa", cursive;
+    letter-spacing: 1.5px;
+    text-align: center;
+    /* font-weight: bold; */
+    font-size: 35px;
+    color: rgb(95, 95, 95);
+    padding-bottom: 20px;
+}
+
+.contact-us-desc {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    font-family: "Comfortaa", cursive;
+    font-family: Arial, Helvetica, sans-serif;
+    /* text-transform: uppercase; */
+    font-weight: normal;
+    letter-spacing: 1px;
+    padding-bottom: 25px;
+    color: grey;
+    /* font-size: 16px; */
+}
+
+#con-des {
+    color: rgb(155, 155, 155);
+}
+.query-box {
+    width: 100%;
+    background-color: rgb(241, 241, 241);
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.query-form {
+    width: 70%;
+    background-color: rgb(80, 80, 80);
+    box-shadow: 0px -15px 0px -5px rgb(255, 0, 0);
+}
+
+.heading {
+    color: white;
+    padding-top: 30px;
+    font-family: ubuntu;
+    letter-spacing: 2px;
+    font-size: 35px;
+    margin-left: 20px;
+}
+
+.heading-dec {
+    color: rgb(255, 58, 58);
+}
+
+.heading-dec-line {
+    color: red;
+    font-weight: normal;
+}
+.forms {
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+    top: 20px;
+    margin-left: 20px;
+}
+
+.info {
+    box-shadow: -10px 11px 10px -5px rgb(36, 36, 36);
+    margin-top: 5px;
+}
+
+.text-box {
+    font-family: ubuntu;
+    color: rgb(41, 41, 41);
+    width: 400px;
+    width: 80%;
+    height: 35px;
+    border-radius: 35px;
+    border: none;
+    margin: 10px;
+    padding-left: 10px;
+    outline: none;
+    transition: all 0.7s;
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+
+#query-box {
+    height: 200px;
+    border-radius: 20px;
+    text-align: left;
+    padding: 10px;
+}
+
+#query-box:hover {
+    box-shadow: inset 0px 0px 7px 4px rgb(37, 37, 37);
+}
+
+.text-box:hover {
+    background-color: rgb(48, 48, 48);
+    color: rgb(255, 255, 255);
+    box-shadow: inset 0px 0px 7px 1px rgb(27, 27, 27);
+}
+
+.submit-button {
+    margin: 10px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    width: 100px;
+    height: 35px;
+    background: rgb(255, 57, 57);
+    color: white;
+    letter-spacing: 2px;
+    font-weight: bold;
+    font-family: ubuntu;
+    border-radius: 50px;
+    border: none;
+    box-shadow: 0px 15px 10px -7px rgb(41, 41, 41);
+    font-size: 12px;
+    transition: all 0.5s;
+}
+
+.submit-button:hover {
+    background: rgb(212, 26, 26);
+    cursor: pointer;
+    transform: scale(1.1);
+    outline: none;
+}
+
+.contact-info {
+    width: 30%;
+    height: 670px;
+    background-image: linear-gradient(
+        to right,
+        rgb(115, 115, 115),
+        rgb(80, 80, 80)
+    );
+    box-shadow: 0px -15px 0px -5px rgb(255, 0, 0);
+}
+
+.contact-info-box {
+    width: 350px;
+    height: 220px;
+    background-color: rgb(255, 255, 255);
+    margin: auto;
+}
+
+.contact-info-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: ubuntu;
+    box-shadow: inset 0px -8px 15px -1px rgb(231, 231, 231);
+}
+
+.call-us {
+    font-size: 20px;
+    letter-spacing: 1px;
+    font-weight: bold;
+    color: rgb(107, 107, 107);
+}
+
+.number {
+    color: rgb(133, 133, 133);
+}
+
+.features {
+    margin-top: 40px;
+}
+
+#features-heading {
+    font-size: 40px;
+}
